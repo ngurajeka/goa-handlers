@@ -17,7 +17,7 @@ import (
 func ErrorHandler(service *goa.Service, verbose bool, contentType string) goa.Middleware {
 	return func(h goa.Handler) goa.Handler {
 		var ct string
-		if ct != "" {
+		if contentType != "" {
 			ct = contentType
 		} else {
 			ct = goa.ErrorMediaIdentifier
